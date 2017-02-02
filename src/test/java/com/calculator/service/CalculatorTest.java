@@ -1,0 +1,48 @@
+package com.calculator.service;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import com.dev.calculator.Calculator;
+
+public class CalculatorTest {
+	
+	@Test
+	public void test_Addition() {
+		Calculator myCalc = new Calculator();
+		int result = myCalc.eval((i, j ) -> i + j , 10, 20);
+		Assert.assertEquals(30, result);
+	}
+	
+	
+	@Test
+	public void test_Substraction() {
+		Calculator myCalc = new Calculator();
+		int result = myCalc.eval((i, j ) -> i - j , 3, 1);
+		Assert.assertEquals(2, result);
+	}
+	
+	@Test
+	public void test_Multiplication() {
+		Calculator myCalc = new Calculator();
+		int result = myCalc.eval((i, j ) -> i * j , 3, 2);
+		Assert.assertEquals(6, result);
+	}
+	
+	
+	@Test
+	public void test_Division() {
+		Calculator myCalc = new Calculator();
+		int result = myCalc.eval((i, j ) -> i / j , 20, 2);
+		Assert.assertEquals(10, result);
+	}
+	
+	@Test
+	public void test_Mean() {
+		Calculator myCalc = new Calculator();
+		int result = myCalc.eval((i, j ) -> (i + j)/2 , 20, 30);
+		Assert.assertEquals(25, result);
+	}
+
+
+}
