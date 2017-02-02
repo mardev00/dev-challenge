@@ -7,14 +7,14 @@ import com.dev.container.Container;
 public class ContainerTest {
 
 	@Test
-	public void addContainer_test() {
+	public void testAddContainer() {
 		Container<String> c = new Container<>("root");
 		Assert.assertEquals(c.root, c);
 		
 	}
 	
 	@Test
-	public void addChildren_test() {
+	public void testAddChildren() {
 		Container<String> c = new Container<>("root");
 		c.add("child1");
 		c.add("child2");
@@ -28,7 +28,7 @@ public class ContainerTest {
 	
 	
 	@Test
-	public void getRoot_test() {
+	public void testGetRoot() {
 		Container<String> c = new Container<>("root");
 			Assert.assertNotNull(c.getRoot());
 			Assert.assertEquals(c, c.getRoot());
@@ -36,7 +36,7 @@ public class ContainerTest {
 	}
 	
 	@Test
-	public void contains_test() {
+	public void testContains() {
 		Container<String> c = new Container<>("myData");
 			Assert.assertNotNull(c.data);
 			Assert.assertEquals("myData", c.data);
